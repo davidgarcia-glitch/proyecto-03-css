@@ -1,0 +1,116 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    height: 70px;
+    background-color: vars.$black;
+    color: vars.$white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    margin-bottom: 100px;
+    
+    @include mix.breakpoint(desktop) {
+        margin-top: -150px;
+        left: 0;
+        position: relative;
+        z-index: 2;
+    }
+  
+    
+}
+
+.boton-texto {
+    font-family: vars.$title-font;
+    padding-left: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.boton-flecha {
+    width: 60px;
+    height: 100%;
+    background-color: vars.$gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+}
+ 
+
+.boton:hover {
+    
+        background-color: vars.$gold;
+    .boton-flecha {
+        background-color: vars.$black;
+    }
+}
+
+.boton-location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    height: 70px;
+    background-color: vars.$black;
+    color: vars.$white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mix.breakpoint(tablet) {
+        margin-left: 40px;
+}
+
+@include mix.breakpoint(desktop) {
+    margin-left: 130px;
+}
+}
+
+.boton-texto-location {
+    font-family: vars.$title-font;
+    padding-right: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.boton-flecha-location {
+    width: 60px;
+    height: 100%;
+    background-color: vars.$gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+    .arrow {
+        width: 12px; // Ajusta según necesidad
+        height: auto;
+    }
+}
+ 
+
+.boton-location:hover {
+    
+        background-color: vars.$gold;
+    .boton-flecha-location {
+        background-color: vars.$black;
+    }
+}
+
+.boton-flecha-location img {
+    width: 20px; // Ajusta según necesidad
+    height: auto;
+    
+}

@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+footer {
+    height: 360px;
+    background-color: vars.$black;
+    margin-left: -16px;
+    width: calc(100% + 33px);
+    display: block;
+    max-width: unset;
+
+    @include mix.breakpoint(tablet) {
+        display: flex;
+        height: 215px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+            .p-footer {
+            width: 40%;
+            margin-top: 40px;
+            }
+            .icon-rrss {
+                margin-top: 45px;
+                margin-right: 40px;
+            }
+            .rrss {
+                width: 22px;
+            }
+
+        }
+        @include mix.breakpoint(desktop) {
+            display: flex;
+            height: 215px;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 50px;
+
+            
+
+            .p-footer {
+            width: 40%;
+            margin-top: 60px;
+            }
+            .icon-rrss {
+                margin-top: 65px;
+                margin-right: 120px;
+            }
+            .rrss {
+                width: 22px;
+            }
+            }
+
+    img {
+        width: 150px;
+        margin-top: 65px;
+        margin-left: 32px;
+        margin-bottom: 38px;
+
+        @include mix.breakpoint(desktop) {
+            margin-left: 120px;
+        }
+    }
+
+    .p-footer {
+        margin-left: 32px;
+        margin-right: 32px;
+        color: vars.$white;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 200;
+        margin-bottom: 38px;
+
+    }
+
+    .icon-rrss {
+        margin-left: 32px;
+        display: flex;
+        gap: 20px;
+        width: 100px;
+    }
+    .rrss {
+        margin: 0;
+    }
+}
